@@ -121,7 +121,7 @@ def degree_distribution(digraph) :
             out_degree_distributions[out_degrees[node_index]] = out_degree_distributions[out_degrees[node_index]] + 1
         else :
             out_degree_distributions[out_degrees[node_index]] = 1
-    return out_degree_distributions
+    return (in_degree_distributions,out_degree_distributions)
     
 #print(in_degree_distribution(EX_GRAPH3))
 #print(compute_in_degrees(make_complete_graph(5)))              

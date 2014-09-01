@@ -23,8 +23,8 @@ def make_plot(digraph_dist):
 #import matplotlib.pyplot as plt
 citation_graph = loadcitation.load_graph(loadcitation.CITATION_URL)
 print "Graph loaded, now computing degrees"
-distribution = digraph.in_degree_distribution(citation_graph)
-make_plot(distribution)
+(in_distribution,out_distribution) = digraph.degree_distribution(citation_graph)
+make_plot(in_distribution)
 er_graph = ergraph.make_directed_er_graph(2000,.1)
 er_distribution = digraph.in_degree_distribution(er_graph)
 make_plot(er_distribution)
